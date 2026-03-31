@@ -1431,7 +1431,7 @@ def parse_args():
     p.add_argument(
         "--model-id", type=str, default="stabilityai/stable-diffusion-xl-base-1.0"
     )
-    p.add_argument("--enable-cpu-offload", action="store_true")
+    p.add_argument("--enable-cpu-offload", action="store_true", default=True)
 
     p.add_argument("--module-path", type=str, default="unet.down_blocks.2")
     p.add_argument(

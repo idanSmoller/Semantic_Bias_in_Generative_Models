@@ -625,10 +625,10 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Compare text bias and activation bias against the baseline profession SD column only."
     )
-    parser.add_argument("--bias", type=Path, default=Path("/mnt/data/bias_analysis.csv"))
-    parser.add_argument("--text", type=Path, default=Path("/mnt/data/text_bias_analysis.csv"))
-    parser.add_argument("--baseline", type=Path, default=Path("/mnt/data/occupations_from_chart_approx.csv"))
-    parser.add_argument("--outdir", type=Path, default=Path("/mnt/data/bias_vs_sd_outputs"))
+    parser.add_argument("--bias", type=Path, default=Path("generated_images/bias_analysis.csv"))
+    parser.add_argument("--text", type=Path, default=Path("generated_images/text_bias_analysis.csv"))
+    parser.add_argument("--baseline", type=Path, default=Path("SD_proportions_baseline.csv"))
+    parser.add_argument("--outdir", type=Path, default=Path("baseline_comparison_results"))
     return parser.parse_args()
 
 
